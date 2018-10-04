@@ -6,4 +6,8 @@ class Item
     @price = price
     @@all << self
   end
+
+  def find(name)
+    @@all.map{|item| item.name == name}
+  end 
 end
