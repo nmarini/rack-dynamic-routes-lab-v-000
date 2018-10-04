@@ -7,7 +7,7 @@ class Item
     @@all << self
   end
 
-  def find(name)
+  def self.find(name)
     @@all.map{|item| item.name == name}
-  end 
+  end
 end
