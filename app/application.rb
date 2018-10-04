@@ -3,11 +3,10 @@ class Application
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
-    # item_name = req.params["q"]
 
     if req.path.match(/items/)
       item_name = req.path("/item/").split.last
-      if item = Item.find(item_name)
+      if item = @@item.include?(item_name)
         resp.write "#{item.name}\n #{item.price}"
       else
       # Item.all.map do |i|
