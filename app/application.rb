@@ -3,7 +3,7 @@ class Application
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
-    # item = req.params["q"]
+    item = req.params["q"]
 binding.pry
     # if req.path.match(/items/)
     #   Items.all.map do |i|
