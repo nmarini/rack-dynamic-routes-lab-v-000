@@ -6,7 +6,7 @@ class Application
     item = req.params["q"]
 binding.pry
   #   if req.path.match(/items/)
-  #     Items.all.map do |i|
+  #     Item.all.map do |i|
   #       if i.name == item
   #         resp.write "#{i.name} #{i.price}\n"
   #       else
