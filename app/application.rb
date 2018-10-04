@@ -6,6 +6,8 @@ class Application
     item = req.params["q"]
 
     if req.path.match(/items/)
+      # item_name = req.path("/item/").split.last
+      if item = Item.find()
       Item.all.map do |i|
         if i.name == item
           resp.write "#{i.name} #{i.price}\n"
