@@ -9,10 +9,6 @@ class Application
       if item = @@item.include?(item_name)
         resp.write "#{item.name}\n #{item.price}"
       else
-      # Item.all.map do |i|
-      #   if i.name == item
-      #     resp.write "#{i.name} #{i.price}\n"
-      #   else
         resp.status = 400
         resp.write "Item not found"
       end
