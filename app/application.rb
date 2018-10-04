@@ -6,6 +6,6 @@ class Application
     item = req.param["q"]
 
     if req.path.match(/items/)
-      
+
   end
 end
