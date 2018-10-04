@@ -4,7 +4,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     item = req.param["q"]
-
+binding.pry
     # if req.path.match(/items/)
     #   Items.all.map do |i|
     #     if i.name == item
